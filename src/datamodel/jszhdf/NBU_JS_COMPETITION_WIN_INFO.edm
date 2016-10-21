@@ -22,6 +22,7 @@
       <attribute name="builder" value="m_value_equal"/>
       <attribute name="web.search.xtype" value="multi-select2"/>
       <attribute name="web.quickSearch" value="true"/>
+      <attribute name="web.form.hidden" value="true"/>
     </item>
     <item caption="学院" colName="XYMC" groupName="" length="50" name="XYMC" type="String">
       <attribute name="enabled" value="true"/>
@@ -30,8 +31,8 @@
     </item>
     <item caption="竞赛名称" colName="JSMC" groupName="" length="100" name="JSMC" type="String">
       <attribute name="enabled" value="true"/>
-      <attribute name="web.form.hidden" value="true"/>
       <attribute name="web.quickSearch" value="true"/>
+      <attribute name="web.form.required" value="true"/>
     </item>
     <item caption="竞赛类别" colName="JSLB" groupName="" length="10" name="JSLB" type="String">
       <attribute name="enabled" value="true"/>
