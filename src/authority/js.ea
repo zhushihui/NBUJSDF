@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<role:Roles xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:role="http://www.wisedu.com/emap/model/role">
+  <role id="js" name="教师" type="DATA">
+    <data edmRef="src/datamodel/jszhdf/NBU_JS_COMPETITION_WIN_INFO.edm" factor="jiaoshi" id="4449f514-25f2-4299-bd88-ee300f72222f" model="NBU_JS_COMPETITION_WIN_INFO" prjRef="nbujsdf"/>
+  </role>
+</role:Roles>

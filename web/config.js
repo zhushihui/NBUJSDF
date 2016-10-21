@@ -31,7 +31,7 @@
 		/*
 		 	APP标题
 		 */
-		"APP_TITLE": "APP标题",
+		"APP_TITLE": "宁波大学学生竞赛系统",
 
 		/*
 			应用底部说明文本
@@ -42,7 +42,7 @@
 			需要展示的模块
 		 */
 		"MODULES": [
-		 //placeHolder_module
+		 {            title:"学生竞赛得分明细",            route:"xsjsdfmx"         }         ,{            title:"学生竞赛得分汇总",            route:"xsjsdfhz"         }         //placeHolder_module
 		],
 
 		/*
