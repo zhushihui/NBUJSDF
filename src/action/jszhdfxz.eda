@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:model="http://www.wisedu.com/emap/model/model">
+  <actionModel authorityIndex="" caption="竞赛综合得分新增" conditionIndex="" displayRef="" displayRefInclude="" displayRefPath="" displayRefPrj="" name="jszhdfxz" orderIndex="" paramFixRef="model:DB_EMAP_BIZ_BASE/NBU_JS_COMPETITION_WIN_INFO" paramFixRefInclude="JSMC,JSLB,JSJB,JS_DATE,JSJX,XSID,XSXM,ZYMC,XYMC,ISLEADER,STULIST,ZDLSMC,SCORE" paramFixRefPath="src/datamodel/jszhdf/NBU_JS_COMPETITION_WIN_INFO.edm" paramFixRefPrj="nbujsdf" paramRef="" paramRefExtra="" paramRefExtraPath="" paramRefExtraPrj="" paramRefInclude="" paramRefPath="" paramRefPrj="" saveLog="true" totalCountType="AUTO" type="UPDATE">
+    <sql>insert into NBU_JS_COMPETITION_WIN_INFO&#xD;
+ (JSMC,JSLB,JSJB,JS_DATE,JSJX,XSID,XSXM,ZYMC,XYMC,ISLEADER,STULIST,ZDLSMC,SCORE)&#xD;
+ values(?,?,?,?,?,?,?,?,?,?,?,?,?)</sql>
+  </actionModel>
+</model:Model>
