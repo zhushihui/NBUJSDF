@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http://www.wisedu.com/emap/model/model" dataSource="DB_EMAP_BIZ_BASE">
-  <dataModel name="NBU_JS_COMPETITION_WIN_INFO" queryOrder="" type="table">
+  <dataModel name="NBU_JS_COMPETITION_WIN_INFO" queryOrder="JS_DATE Desc,JSMC Asc,XSXM Asc" type="table">
     <item caption="主键" colName="CWSID" groupName="" length="32" name="CWSID" pK="true" type="String">
       <attribute name="enabled" value="true"/>
       <attribute name="web.hidden" value="true"/>
@@ -31,8 +31,13 @@
     </item>
     <item caption="竞赛名称" colName="JSMC" groupName="" length="100" name="JSMC" type="String">
       <attribute name="enabled" value="true"/>
-      <attribute name="web.quickSearch" value="true"/>
       <attribute name="web.form.required" value="true"/>
+      <attribute name="web.xtype" value="select"/>
+      <attribute name="web.search.xtype" value="multi-select2"/>
+      <attribute name="web.quickSearch" value="true"/>
+      <attribute name="useDicType" value="toDisplay"/>
+      <attribute name="builder" value="m_value_equal"/>
+      <attribute name="dic" value="c9b7f39b-278f-4489-b4be-77590336c6c3"/>
     </item>
     <item caption="竞赛类别" colName="JSLB" groupName="" length="10" name="JSLB" type="String">
       <attribute name="enabled" value="true"/>
@@ -72,7 +77,7 @@
       <attribute name="enabled" value="true"/>
       <attribute name="web.hidden" value="true"/>
     </item>
-    <item caption="团队组号(nbu_js_competition_result主键)" colName="RID" groupName="" length="32" name="RID" type="String">
+    <item caption="团队组号" colName="RID" groupName="" length="32" name="RID" type="String">
       <attribute name="enabled" value="true"/>
       <attribute name="web.hidden" value="true"/>
     </item>
@@ -93,6 +98,7 @@
     <item caption="获奖得分" colName="SCORE" groupName="" length="" name="SCORE" type="double">
       <attribute name="enabled" value="true"/>
       <attribute name="web.form.hidden" value="true"/>
+      <attribute name="pattern" value="#0.000"/>
     </item>
     <rowFactors>
       <rowFactor id="be2a0d8b-10d9-4c3a-8d04-eed385fa3cac" name="xuesheng">
