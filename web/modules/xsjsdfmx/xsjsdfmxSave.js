@@ -73,7 +73,8 @@ define(function(require, exports, module) {
         	for (var i=0;i<sidlist.length;i++){
         		var sidArray = sidlist[i].split("-");
         		var xsmcArray = xsmclist[i].split("-");
-        		var oneVO = {'JSMC':mapData.JSMC,
+        		var oneVO = {'JSID':mapData.JSID,
+        				'JSMC':mapData.JSID_DISPLAY,
         				'JSLB':mapData.JSLB_DISPLAY, 
         				'JSJB':mapData.JSJB_DISPLAY,
         				'JS_DATE':mapData.JS_DATE,
