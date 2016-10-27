@@ -42,7 +42,7 @@
 			需要展示的模块
 		 */
 		"MODULES": [
-		 {            title:"学生竞赛得分明细",            route:"xsjsdfmx"         }         ,{            title:"学生竞赛得分汇总",            route:"xsjsdfhz"         }         //placeHolder_module
+		 {            title:"学生竞赛得分明细",            route:"xsjsdfmx"         }         ,{            title:"专业竞赛得分汇总",            route:"xsjsdfhz"         }         //placeHolder_module
 		],
 
 		/*

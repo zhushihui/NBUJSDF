@@ -84,8 +84,20 @@
         },
         
         actionExport: function(){
-        	bs.exportData({}).done(function(data){
-        	});
+        	var params = {
+					root: contextPath,
+					app : "nbujsdf",
+					module : "modules",
+					page : 'xsjsdfmx',
+					action : 'NBU_JS_COMPETITION_WIN_INFO_QUERY'
+			};
+			var querySetting = $('#emapAdvancedQuery').emapAdvancedQuery('getValue');
+			if (querySetting) {
+				params['querySetting'] = querySetting;
+			}
+			$('#emapdatatable').emapdatatable('selectColumnsExport', params);	
+//        	bs.exportData({}).done(function(data){
+//        	});
         },
 
 		actionImport: function(){

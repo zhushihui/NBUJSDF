@@ -29,15 +29,22 @@
       <attribute name="web.form.hidden" value="true"/>
       <attribute name="web.quickSearch" value="true"/>
     </item>
+    <item caption="竞赛名称" colName="JSID" groupName="" length="32" name="JSID" type="String">
+      <attribute name="enabled" value="true"/>
+      <attribute name="useDicType" value="toDisplay"/>
+      <attribute name="web.xtype" value="select"/>
+      <attribute name="web.search.xtype" value="select"/>
+      <attribute name="builder" value="equal"/>
+      <attribute name="dic" value="c9b7f39b-278f-4489-b4be-77590336c6c3"/>
+      <attribute name="web.quickSearch" value="true"/>
+    </item>
     <item caption="竞赛名称" colName="JSMC" groupName="" length="100" name="JSMC" type="String">
       <attribute name="enabled" value="true"/>
       <attribute name="web.form.required" value="true"/>
       <attribute name="web.xtype" value="select"/>
-      <attribute name="web.search.xtype" value="multi-select2"/>
       <attribute name="web.quickSearch" value="true"/>
-      <attribute name="useDicType" value="toDisplay"/>
-      <attribute name="builder" value="m_value_equal"/>
-      <attribute name="dic" value="c9b7f39b-278f-4489-b4be-77590336c6c3"/>
+      <attribute name="web.search.quickSearchXtype" value="select"/>
+      <attribute name="web.hidden" value="true"/>
     </item>
     <item caption="竞赛类别" colName="JSLB" groupName="" length="10" name="JSLB" type="String">
       <attribute name="enabled" value="true"/>
@@ -81,7 +88,7 @@
       <attribute name="enabled" value="true"/>
       <attribute name="web.hidden" value="true"/>
     </item>
-    <item caption="获奖团队" colName="STULIST" groupName="" length="100" name="STULIST" type="String">
+    <item caption="获奖团队" colName="STULIST" groupName="" length="300" name="STULIST" type="String">
       <attribute name="enabled" value="true"/>
       <attribute name="useDicType" value="toDisplay"/>
       <attribute name="web.xtype" value="multi-select2"/>
