@@ -33,6 +33,10 @@
 					page : 'xsjsdfhz',
 					action : 'jsdfhz'
 			};
+			var querySetting = $('#emapAdvancedQuery').emapAdvancedQuery('getValue');
+			if (querySetting) {
+				params['querySetting'] = querySetting;
+			}
 			//选择字段导出
 			$('#emapdatatable').emapdatatable('selectColumnsExport', params);	
 		}

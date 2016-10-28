@@ -4,6 +4,7 @@
     <sql>select zymc,xymc,round(sum(score),3) as score&#xD;
 from nbu_js_competition_win_info&#xD;
 #sub[where $]&#xD;
-group by zymc,xymc</sql>
+group by zymc,xymc&#xD;
+order by score desc</sql>
   </actionModel>
 </model:Model>

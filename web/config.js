@@ -59,11 +59,9 @@
 			"userInfo": {
 				"image": "./public/images/user.png",
 				"info": [
-					"工号",
-					"姓名 性别",
-					"学校 部门",
-					"邮箱",
-					"电话"
+				    "工号:" + pageMeta.params.userId,
+				    "姓名:" + pageMeta.params.userName,
+				    "角色:" + pageMeta.params.roleId
 				],
 				"logoutHref": "javascript:void(0);"
 			}

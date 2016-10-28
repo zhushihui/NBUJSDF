@@ -84,20 +84,8 @@
         },
         
         actionExport: function(){
-        	var params = {
-        			"contextPath": contextPath,
-    	        	"app": "nbujsdf",
-    	        	"module": "modules",
-    	        	"page": "xsjsdfhz",
-    	        	"action": "jsdfhz"
-			};
-			var querySetting = $('#emapAdvancedQuery').emapAdvancedQuery('getValue');
-			if (querySetting) {
-				params['querySetting'] = querySetting;
-			}
-			$('#emapdatatable').emapdatatable('selectColumnsExport', params);	
-//        	bs.exportData({}).done(function(data){
-//        	});
+        	bs.exportData({}).done(function(data){
+        	});
         },
 
 		actionImport: function(){
