@@ -4,7 +4,7 @@ define(function(require, exports, module) {
 
     var viewConfig = {
         initialize: function(data) {
-        	var mode = WIS_EMAP_SERV.getModel(bs.api.pageModel, 'NBU_JS_COMPETITION_WIN_INFO_QUERY', 'form');
+        	var mode = WIS_EMAP_SERV.getModel(bs.api.pageModel, 'jsdfmx', 'form');
             $("#emapForm").emapForm({
                 data: mode,
                 model: 'h',

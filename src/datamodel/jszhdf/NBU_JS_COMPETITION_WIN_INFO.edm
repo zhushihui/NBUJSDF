@@ -18,11 +18,7 @@
     </item>
     <item caption="专业" colName="ZYMC" groupName="" length="100" name="ZYMC" type="String">
       <attribute name="enabled" value="true"/>
-      <attribute name="web.grid.hidden" value="true"/>
-      <attribute name="builder" value="m_value_equal"/>
-      <attribute name="web.search.xtype" value="multi-select2"/>
       <attribute name="web.quickSearch" value="true"/>
-      <attribute name="web.form.hidden" value="true"/>
     </item>
     <item caption="学院" colName="XYMC" groupName="" length="50" name="XYMC" type="String">
       <attribute name="enabled" value="true"/>
@@ -40,11 +36,6 @@
     </item>
     <item caption="竞赛名称" colName="JSMC" groupName="" length="100" name="JSMC" type="String">
       <attribute name="enabled" value="true"/>
-      <attribute name="web.form.required" value="true"/>
-      <attribute name="web.xtype" value="select"/>
-      <attribute name="web.quickSearch" value="true"/>
-      <attribute name="web.search.quickSearchXtype" value="select"/>
-      <attribute name="web.hidden" value="true"/>
     </item>
     <item caption="竞赛类别" colName="JSLB" groupName="" length="10" name="JSLB" type="String">
       <attribute name="enabled" value="true"/>
@@ -112,6 +103,9 @@
         <sql>xsid = ${custom.currentUserId}</sql>
       </rowFactor>
       <rowFactor id="4449f514-25f2-4299-bd88-ee300f72222f" name="jiaoshi">
+        <sql>zdlsmc = ${custom.currentUserId}</sql>
+      </rowFactor>
+      <rowFactor id="cb596c45-7491-4e61-a984-dd678be472e1" name="xuexiaoguanliyuan">
         <sql>1=1</sql>
       </rowFactor>
     </rowFactors>

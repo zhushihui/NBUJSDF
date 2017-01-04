@@ -31,7 +31,7 @@
 					app : "nbujsdf",
 					module : "modules",
 					page : 'xsjsdfmx',
-					action : 'NBU_JS_COMPETITION_WIN_INFO_QUERY'
+					action : 'jsdfmx'
 			};
 			//选择字段导出
 			$('#emapdatatable').emapdatatable('selectColumnsExport', params);	

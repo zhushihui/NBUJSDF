@@ -42,7 +42,7 @@
  	   actionEdit: function(e){
         	var id = $(e.target).attr("data-x-wid");
         	var xsjsdfmxEditTpl = utils.loadCompiledPage('xsjsdfmxSave');
-        	var data = WIS_EMAP_SERV.getData(bs.api.pageModel, 'NBU_JS_COMPETITION_WIN_INFO_QUERY', {CWSID:id});
+        	var data = WIS_EMAP_SERV.getData(bs.api.pageModel, 'jsdfmx', {CWSID:id});
         	
         	$.bhPaperPileDialog.show({
         		content: xsjsdfmxEditTpl.render({}),
@@ -59,7 +59,7 @@
         actionDetail: function(e){
         	var id = $(e.target).attr("data-x-wid");
         	var xsjsdfmxViewTpl = utils.loadCompiledPage('xsjsdfmxSave');
-        	var data = WIS_EMAP_SERV.getData(bs.api.pageModel, 'NBU_JS_COMPETITION_WIN_INFO_QUERY', {CWSID:id});
+        	var data = WIS_EMAP_SERV.getData(bs.api.pageModel, 'jsdfmx', {CWSID:id});
         	
         	$.bhPaperPileDialog.show({
         		content: xsjsdfmxViewTpl.render({}),
@@ -89,7 +89,7 @@
 					app : "nbujsdf",
 					module : "modules",
 					page : 'xsjsdfmx',
-					action : 'NBU_JS_COMPETITION_WIN_INFO_QUERY'
+					action : 'jsdfmx'
 			};
 			var querySetting = $('#emapAdvancedQuery').emapAdvancedQuery('getValue');
 			if (querySetting) {
@@ -106,7 +106,7 @@
 	        	"app": "nbujsdf",
 	        	"module": "modules",
 	        	"page": "xsjsdfmx",
-	        	"action": "NBU_JS_COMPETITION_WIN_INFO_QUERY",
+	        	"action": "jsdfmx",
 	        	//"tplUrl": "modules/htgl/dataModel.T_JZG_HT.xls",
 	        	"preCallback": function() {
 	        	},
@@ -121,7 +121,7 @@
         },
         
 		_initAdvanceQuery: function() {
-            var searchData = WIS_EMAP_SERV.getModel(bs.api.pageModel, 'NBU_JS_COMPETITION_WIN_INFO_QUERY', "search");
+            var searchData = WIS_EMAP_SERV.getModel(bs.api.pageModel, 'jsdfmx', "search");
             var $query = $('#emapAdvancedQuery').emapAdvancedQuery({
                 data: searchData,
                 contextPath : contextPath,
@@ -139,7 +139,7 @@
         _initTable: function() {
             var tableOptions = {
                 pagePath: bs.api.pageModel,
-                action: 'NBU_JS_COMPETITION_WIN_INFO_QUERY',
+                action: 'jsdfmx',
                 height:null,
                 customColumns: [{
                     colIndex: '0',

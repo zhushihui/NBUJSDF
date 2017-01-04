@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:model="http://www.wisedu.com/emap/model/model">
+  <actionModel caption="竞赛得分明细" displayRef="biz:jsmx" displayRefInclude="XSID,XSXM,XYMC,JSMC,JSLB,JSJB,JS_DATE,JSJX,STULIST,JG0101ID,SCORE,CWSID" displayRefPath="src/parammodel/jsmx.epm" displayRefPrj="nbujsdf" name="jsdfmx" paramRef="biz:jsmx" paramRefInclude="XSID,XSXM,XYMC,JSMC,JSLB,JSJB,JS_DATE,JSJX,STULIST,JG0101ID,SCORE,CWSID" paramRefPath="src/parammodel/jsmx.epm" paramRefPrj="nbujsdf" saveLog="true" totalCountType="AUTO" type="QUERY">
+    <sql>select nbu_js_competition_win_info.cwsid,nbu_js_competition_win_info.xsid,nbu_js_competition_win_info.xsxm,&#xD;
+nbu_js_competition_win_info.xymc,nbu_js_competition_win_info.jsmc,nbu_js_competition_win_info.jslb,&#xD;
+nbu_js_competition_win_info.jsjb,nbu_js_competition_win_info.js_date,nbu_js_competition_win_info.jsjx,&#xD;
+nbu_js_competition_win_info.stulist,jg0101.jg0101id,nbu_js_competition_win_info.score&#xD;
+from nbu_js_competition_win_info,jg0101&#xD;
+where nbu_js_competition_win_info.zdlsmc= jg0101.jg0101id&#xD;
+#sub[and $]&#xD;
+order by js_date desc,xsid</sql>
+  </actionModel>
+</model:Model>

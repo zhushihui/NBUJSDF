@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<role:Roles xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:role="http://www.wisedu.com/emap/model/role">
+  <role id="xxgly" name="学校管理员" type="DATA">
+    <data edmRef="src/datamodel/jszhdf/NBU_JS_COMPETITION_WIN_INFO.edm" factor="xuexiaoguanliyuan" id="cb596c45-7491-4e61-a984-dd678be472e1" model="NBU_JS_COMPETITION_WIN_INFO" prjRef="nbujsdf"/>
+  </role>
+</role:Roles>

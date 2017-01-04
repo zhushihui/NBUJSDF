@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http://www.wisedu.com/emap/model/model">
+  <bizModel name="jsdw">
+    <dataModelRef edmRef="src/datamodel/js/JG0101.edm" include="JG0101ID:JG0101ID,JGH:JGH,XM:XM,SFZJLXM:SFZJLXM,SFZJH:SFZJH,XX0301ID:XX0301ID,GKDW:GKDW,STATUS:STATUS" modelName="model:DB_EMAP_BIZ_BASE/JG0101" prjRef="nbujsdf" tableAlias="JG0101">
+      <item groupName="" name="JG0101ID" originName="JG0101ID"/>
+      <item groupName="" name="JGH" originName="JGH"/>
+      <item groupName="" name="XM" originName="XM"/>
+      <item groupName="" name="SFZJLXM" originName="SFZJLXM"/>
+      <item groupName="" name="SFZJH" originName="SFZJH"/>
+      <item groupName="" name="XX0301ID" originName="XX0301ID"/>
+      <item groupName="" name="GKDW" originName="GKDW"/>
+      <item groupName="" name="STATUS" originName="STATUS"/>
+    </dataModelRef>
+    <dataModelRef edmRef="src/datamodel/xy/XX0301.edm" include="XX0301ID:XX0301ID_1,DWH:DWH,DWMC:DWMC,BZ:BZ" modelName="model:DB_EMAP_BIZ_BASE/XX0301" prjRef="nbujsdf" tableAlias="XX0301">
+      <item groupName="" name="XX0301ID_1" originName="XX0301ID"/>
+      <item groupName="" name="DWH" originName="DWH"/>
+      <item groupName="" name="DWMC" originName="DWMC"/>
+      <item groupName="" name="BZ" originName="BZ"/>
+    </dataModelRef>
+  </bizModel>
+</model:Model>

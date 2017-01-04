@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:model="http://www.wisedu.com/emap/model/model">
+  <bizModel mainDataModel="NBU_JS_COMPETITION_WIN_INFO" name="jsmx" order="JG0101ID,JGH,XM,SFZJLXM,SFZJH,XX0301ID,GKDW,STATUS,CWSID,XSID,XSXM,ZYMC,XYMC,JSID,JSMC,JSLB,JSJB,JS_DATE,JSJX,ISLEADER,RID,STULIST,ZDLSMC,SCORE">
+    <dataModelRef edmRef="src/datamodel/js/JG0101.edm" include="JG0101ID:JG0101ID,JGH:JGH,XM:XM,SFZJLXM:SFZJLXM,SFZJH:SFZJH,XX0301ID:XX0301ID,GKDW:GKDW,STATUS:STATUS" modelName="model:DB_EMAP_BIZ_BASE/JG0101" prjRef="nbujsdf" tableAlias="JG0101">
+      <item caption="指导老师" groupName="" name="JG0101ID" originName="JG0101ID">
+        <attribute name="useDicType" value="toDisplay"/>
+        <attribute name="web.xtype" value="select"/>
+        <attribute name="web.search.xtype" value="multi-select2"/>
+        <attribute name="builder" value="m_value_equal"/>
+        <attribute name="dic" value="c3b05605-1e43-4db9-ac31-32d834c02293"/>
+        <attribute name="web.quickSearch" value="true"/>
+        <attribute name="web.required" value="true"/>
+      </item>
+      <item groupName="" name="JGH" originName="JGH"/>
+      <item groupName="" name="XM" originName="XM"/>
+      <item groupName="" name="SFZJLXM" originName="SFZJLXM"/>
+      <item groupName="" name="SFZJH" originName="SFZJH"/>
+      <item groupName="" name="XX0301ID" originName="XX0301ID"/>
+      <item groupName="" name="GKDW" originName="GKDW"/>
+      <item groupName="" name="STATUS" originName="STATUS"/>
+    </dataModelRef>
+    <dataModelRef edmRef="src/datamodel/jszhdf/NBU_JS_COMPETITION_WIN_INFO.edm" include="CWSID:CWSID,XSID:XSID,XSXM:XSXM,ZYMC:ZYMC,XYMC:XYMC,JSID:JSID,JSMC:JSMC,JSLB:JSLB,JSJB:JSJB,JS_DATE:JS_DATE,JSJX:JSJX,ISLEADER:ISLEADER,RID:RID,STULIST:STULIST,ZDLSMC:ZDLSMC,SCORE:SCORE" modelName="model:DB_EMAP_BIZ_BASE/NBU_JS_COMPETITION_WIN_INFO" prjRef="nbujsdf" tableAlias="NBU_JS_COMPETITION_WIN_INFO">
+      <item groupName="" name="CWSID" originName="CWSID"/>
+      <item groupName="" name="XSID" originName="XSID"/>
+      <item groupName="" name="XSXM" originName="XSXM"/>
+      <item groupName="" name="ZYMC" originName="ZYMC"/>
+      <item groupName="" name="XYMC" originName="XYMC"/>
+      <item groupName="" name="JSID" originName="JSID"/>
+      <item groupName="" name="JSMC" originName="JSMC">
+        <attribute name="useDicType" value="toDisplay"/>
+        <attribute name="web.xtype" value="select"/>
+        <attribute name="web.search.xtype" value="multi-select2"/>
+        <attribute name="builder" value="m_value_equal"/>
+        <attribute name="dic" value="c9b7f39b-278f-4489-b4be-77590336c6c3"/>
+        <attribute name="web.required" value="true"/>
+      </item>
+      <item groupName="" name="JSLB" originName="JSLB"/>
+      <item groupName="" name="JSJB" originName="JSJB"/>
+      <item groupName="" name="JS_DATE" originName="JS_DATE"/>
+      <item groupName="" name="JSJX" originName="JSJX"/>
+      <item groupName="" name="ISLEADER" originName="ISLEADER"/>
+      <item groupName="" name="RID" originName="RID"/>
+      <item groupName="" name="STULIST" originName="STULIST"/>
+      <item groupName="" name="ZDLSMC" originName="ZDLSMC"/>
+      <item groupName="" name="SCORE" originName="SCORE"/>
+    </dataModelRef>
+  </bizModel>
+</model:Model>
