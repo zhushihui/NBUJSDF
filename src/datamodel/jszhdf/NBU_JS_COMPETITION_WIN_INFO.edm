@@ -58,8 +58,7 @@
     <item caption="竞赛时间" colName="JS_DATE" groupName="" length="20" name="JS_DATE" type="String">
       <attribute name="enabled" value="true"/>
       <attribute name="web.form.required" value="true"/>
-      <attribute name="web.xtype" value="date-ym"/>
-      <attribute name="web.search.xtype" value="date-ym"/>
+      <attribute name="web.search.xtype" value="number-range"/>
       <attribute name="web.quickSearch" value="true"/>
     </item>
     <item caption="竞赛奖项" colName="JSJX" groupName="" length="20" name="JSJX" type="String">

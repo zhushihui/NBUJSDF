@@ -36,7 +36,10 @@
       </item>
       <item groupName="" name="JSLB" originName="JSLB"/>
       <item groupName="" name="JSJB" originName="JSJB"/>
-      <item groupName="" name="JS_DATE" originName="JS_DATE"/>
+      <item groupName="" name="JS_DATE" originName="JS_DATE">
+        <attribute name="web.xtype" value="date-ym"/>
+        <attribute name="web.quickSearch" value="false"/>
+      </item>
       <item groupName="" name="JSJX" originName="JSJX"/>
       <item groupName="" name="ISLEADER" originName="ISLEADER"/>
       <item groupName="" name="RID" originName="RID"/>
