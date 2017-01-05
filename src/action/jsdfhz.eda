@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model:Model xmlns:model="http://www.wisedu.com/emap/model/model">
-  <actionModel caption="竞赛得分汇总" displayRef="model:DB_EMAP_BIZ_BASE/NBU_JS_COMPETITION_WIN_INFO" displayRefInclude="ZYMC,XYMC,JS_DATE,SCORE" displayRefPath="src/datamodel/jszhdf/NBU_JS_COMPETITION_WIN_INFO.edm" displayRefPrj="nbujsdf" name="jsdfhz" paramFixRef="" paramFixRefInclude="XSID,XSXM,ZYMC,XYMC,SCORE" paramFixRefPath="" paramFixRefPrj="" paramRef="model:DB_EMAP_BIZ_BASE/NBU_JS_COMPETITION_WIN_INFO" paramRefInclude="ZYMC,XYMC,JS_DATE,SCORE" paramRefPath="src/datamodel/jszhdf/NBU_JS_COMPETITION_WIN_INFO.edm" paramRefPrj="nbujsdf" saveLog="true" totalCountType="AUTO" type="QUERY">
+  <actionModel caption="竞赛得分汇总" conditionIndex="" displayRef="model:DB_EMAP_BIZ_BASE/NBU_JS_COMPETITION_WIN_INFO" displayRefInclude="ZYMC,XYMC,JS_DATE,SCORE" displayRefPath="src/datamodel/jszhdf/NBU_JS_COMPETITION_WIN_INFO.edm" displayRefPrj="nbujsdf" name="jsdfhz" orderIndex="2" paramFixRef="" paramFixRefInclude="XSID,XSXM,ZYMC,XYMC,SCORE" paramFixRefPath="" paramFixRefPrj="" paramRef="model:DB_EMAP_BIZ_BASE/NBU_JS_COMPETITION_WIN_INFO" paramRefInclude="ZYMC,XYMC,JS_DATE,SCORE" paramRefPath="src/datamodel/jszhdf/NBU_JS_COMPETITION_WIN_INFO.edm" paramRefPrj="nbujsdf" saveLog="true" totalCountType="AUTO" type="QUERY">
     <sql>select zymc,xymc,substr(js_date,0,4)||'年' as js_date,round(sum(score),3) as score&#xD;
 from nbu_js_competition_win_info&#xD;
 #sub[where $]&#xD;
 group by zymc,xymc,js_date&#xD;
-order by js_date desc,score desc</sql>
+#sub[order by $]</sql>
   </actionModel>
 </model:Model>

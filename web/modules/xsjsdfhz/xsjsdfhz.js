@@ -129,6 +129,7 @@
                 pagePath: bs.api.pageModel,
                 action: 'jsdfhz',
                 height:null,
+                sortable: true,
                 customColumns: [
 //                                {
 //                    colIndex: '0',
