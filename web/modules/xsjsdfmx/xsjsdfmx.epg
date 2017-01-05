@@ -7,6 +7,7 @@
       <action name="NBU_JS_COMPETITION_WIN_INFO_SAVE" ref="model:NBU_JS_COMPETITION_WIN_INFO.SAVE" url="src/datamodel/jszhdf/NBU_JS_COMPETITION_WIN_INFO.edm" multiple="false" prjRef="nbujsdf" canAccess="true"/>
       <action name="jszhdfxz" ref="action:jszhdfxz" url="src/action/jszhdfxz.eda" multiple="false" prjRef="nbujsdf" canAccess="true"/>
       <action name="jsdfmx" ref="action:jsdfmx" url="src/action/jsdfmx.eda" multiple="true" prjRef="nbujsdf" canAccess="true"/>
+      <action name="jsdfcjdzl" ref="action:jsdfcjdzl" url="src/actionflow/jsdfcjdzl.aflow" multiple="false" prjRef="nbujsdf" canAccess="true"/>
     </actions>
   </page>
 </page:Pages>

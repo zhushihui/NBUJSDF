@@ -8,6 +8,6 @@ nbu_js_competition_win_info.stulist,jg0101.jg0101id,nbu_js_competition_win_info.
 from nbu_js_competition_win_info,jg0101&#xD;
 where nbu_js_competition_win_info.zdlsmc= jg0101.jg0101id&#xD;
 #sub[and $]&#xD;
-order by js_date desc,xsid</sql>
+order by js_date desc,jsmc</sql>
   </actionModel>
 </model:Model>

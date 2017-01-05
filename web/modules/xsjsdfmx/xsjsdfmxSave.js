@@ -25,34 +25,29 @@ define(function(require, exports, module) {
                      title:'操作提示',
                      content:'是否进行保存操作',
                      buttons:[{text:'确认',className:'bh-btn-success',callback:function(){
-                 		//for循环调用保存方法保存数据
-                 		var isSave = 0; 
-                 		for (var i=0;i<resultListData.length;i++){
-                 			BH_UTILS.doAjax('../modules/xsjsdfmx/jszhdfxz.do', resultListData[i]).done(function(data){
-                 				if(data.code == "0"){//保存成功
-                 					isSave = 0; 
-                 				}else{//保存失败
-                 					isSave = 1; 
-                 				}
-                 			});
-                 		}
-                 		//显示操作结果
-                 		if(isSave == 0){
-                 			BH_UTILS.bhDialogSuccess({
-                                 title:'操作提示',
-                                 content:'保存成功',
-                                 callback:function(){
-                                 }
-                             });
-         					$('#emapdatatable').emapdatatable('reload');
-         					$.bhPaperPileDialog.hide();//关闭当前弹窗
-                 		}else{
-                 			BH_UTILS.bhDialogDanger({
-                                 title:'操作提示',
-                                 content:'保存失败',
-                                 buttons:[{text:'确认',className:'bh-btn-warning',callback:function(){}}]
-                             });
-                 		}
+                    	//参数格式转换
+                    	 var resultParam = JSON.stringify(resultListData); 
+                    	 //参数存入参数组中
+                    	 var param = {'modelList':resultParam};
+                    	 //使用多条数据新增动作流
+                    	 BH_UTILS.doAjax('../modules/xsjsdfmx/jsdfcjdzl.do', param).done(function(data){
+                    		 if(data.code == "0"){
+                    			 BH_UTILS.bhDialogSuccess({
+                    				 title:'操作提示',
+                    				 content:'保存成功',
+                    				 callback:function(){
+                    				 }
+                    			 });
+                    			 $('#emapdatatable').emapdatatable('reload');
+                    			 $.bhPaperPileDialog.hide();//关闭当前弹窗
+                    		 }else{
+                    			 BH_UTILS.bhDialogDanger({
+                    				 title:'操作提示',
+                    				 content:'保存失败',
+                    				 buttons:[{text:'确认',className:'bh-btn-warning',callback:function(){}}]
+                    			 });
+                    		 }
+                    	 });
                      }},{text:'取消',className:'bh-btn-warning',callback:function(){                        	
                      }}]
                  });
