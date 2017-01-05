@@ -73,7 +73,7 @@ define(function(require, exports, module) {
          	for (var i=0;i<sidlist.length;i++){
          		var sidArray = sidlist[i].split("-");
          		var xsmcArray = xsmclist[i].split("-");
-         		var oneVO = {'JSID':mapData.JSID,
+         		var oneVO = {'JSID':mapData.JSMC,
          				'JSMC':mapData.JSMC_DISPLAY,
          				'JSLB':mapData.JSLB_DISPLAY, 
          				'JSJB':mapData.JSJB_DISPLAY,
@@ -100,101 +100,13 @@ define(function(require, exports, module) {
          //在list集合内计算获奖得分
          getScore : function (listData){
          	var number =listData[0].STULIST.split("、").length;//团队人数
+         	var resultData =[listData.length] ;//最终集合
          	for (var i=0;i<listData.length;i++){
          		var oneVO = listData[i];
-         		if(oneVO.JSJX =="一等奖" || oneVO.JSJX =="金奖" || oneVO.JSJX =="特等奖"){
-         			if(oneVO.JSJB == "国家"){
-         				if(oneVO.ISLEADER == "Y"){
-         					if(oneVO.JSLB == "A"){
-         						oneVO.SCORE=3;
-         					}else{
-         						oneVO.SCORE=1.2;
-         					}
-         				}else{
-         					if(oneVO.JSLB == "A"){
-         						oneVO.SCORE=2/(number-1);
-         					}else{
-         						oneVO.SCORE=0.8/(number-1);
-         					}
-         				}
-         			}else{
-         				if(oneVO.ISLEADER == "Y"){
-         					if(oneVO.JSLB == "A"){
-         						oneVO.SCORE=1.8;
-         					}else{
-         						oneVO.SCORE=0.6;
-         					}
-         				}else{
-         					if(oneVO.JSLB == "A"){
-         						oneVO.SCORE=1.2/(number-1);
-         					}else{
-         						oneVO.SCORE=0.4/(number-1);
-         					}
-         				}
-         			}
-         		}else if(oneVO.JSJX =="二等奖" || oneVO.JSJX =="银奖"){
-         			if(oneVO.JSJB == "国家"){
-         				if(oneVO.ISLEADER == "Y"){
-         					if(oneVO.JSLB == "A"){
-         						oneVO.SCORE=1.8;
-         					}else{
-         						oneVO.SCORE=0.72;
-         					}
-         				}else{
-         					if(oneVO.JSLB == "A"){
-         						oneVO.SCORE=1.2/(number-1);
-         					}else{
-         						oneVO.SCORE=0.48/(number-1);
-         					}
-         				}
-         			}else{
-         				if(oneVO.ISLEADER == "Y"){
-         					if(oneVO.JSLB == "A"){
-         						oneVO.SCORE=1.08;
-         					}else{
-         						oneVO.SCORE=0.36;
-         					}
-         				}else{
-         					if(oneVO.JSLB == "A"){
-         						oneVO.SCORE=0.72/(number-1);
-         					}else{
-         						oneVO.SCORE=0.24/(number-1);
-         					}
-         				}
-         			}
-         		}else if(oneVO.JSJX =="三等奖" || oneVO.JSJX =="铜奖" || oneVO.JSJX =="荣誉奖"|| (oneVO.JSJX.indexOf("Honorable")!=-1)){
-         			if(oneVO.JSJB == "国家"){
-         				if(oneVO.ISLEADER == "Y"){
-         					if(oneVO.JSLB == "A"){
-         						oneVO.SCORE=1.2;
-         					}else{
-         						oneVO.SCORE=0.48;
-         					}
-         				}else{
-         					if(oneVO.JSLB == "A"){
-         						oneVO.SCORE=0.8/(number-1);
-         					}else{
-         						oneVO.SCORE=0.32/(number-1);
-         					}
-         				}
-         			}else{
-         				if(oneVO.ISLEADER == "Y"){
-         					if(oneVO.JSLB == "A"){
-         						oneVO.SCORE=0.72;
-         					}else{
-         						oneVO.SCORE=0.24;
-         					}
-         				}else{
-         					if(oneVO.JSLB == "A"){
-         						oneVO.SCORE=0.48/(number-1);
-         					}else{
-         						oneVO.SCORE=0.16/(number-1);
-         					}
-         				}
-         			}
-         		}
+         		oneVO = bs.popupGetScore(oneVO,number);//获奖得分公共计算方法
+         		resultData[i] = oneVO;
          	}
-         	return listData;
+         	return resultData;
          }
 
      };
