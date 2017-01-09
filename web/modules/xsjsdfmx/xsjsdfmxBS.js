@@ -9,9 +9,9 @@
 	var THIRDTWO="铜奖";
 	var THIRDTHREE="荣誉奖";
 	var THIRDFOUR="Honorable";
-	var LEVEL = "国家";  //竞赛级别
-	var TYPE = "A";  //竞赛类别
-	var ISHEAD = "Y";//是否领队
+	var LEVEL_GUOJIA = "国家";  //竞赛级别
+	var TYPE_A = "A";  //竞赛类别
+	var ISLEADER = "Y";//是否领队
 	var bs = {
 		api: {
 			pageModel: 'modules/xsjsdfmx.do',
@@ -51,29 +51,29 @@
 		//获奖得分计算,单个数据集合和团队人数为参数
         popupGetScore : function(oneVO,number){
         	if(oneVO.JSJX == FIRSTONE || oneVO.JSJX ==FIRSTTWO || oneVO.JSJX ==FIRSTTHREE){
-     			if(oneVO.JSJB == LEVEL){
-     				if(oneVO.ISLEADER == ISHEAD){
-     					if(oneVO.JSLB == TYPE){
+     			if(oneVO.JSJB == LEVEL_GUOJIA){
+     				if(oneVO.ISLEADER == ISLEADER){
+     					if(oneVO.JSLB == TYPE_A){
      						oneVO.SCORE=3;
      					}else{
      						oneVO.SCORE=1.2;
      					}
      				}else{
-     					if(oneVO.JSLB == TYPE){
+     					if(oneVO.JSLB == TYPE_A){
      						oneVO.SCORE=2/(number-1);
      					}else{
      						oneVO.SCORE=0.8/(number-1);
      					}
      				}
      			}else{
-     				if(oneVO.ISLEADER == ISHEAD){
-     					if(oneVO.JSLB == TYPE){
+     				if(oneVO.ISLEADER == ISLEADER){
+     					if(oneVO.JSLB == TYPE_A){
      						oneVO.SCORE=1.8;
      					}else{
      						oneVO.SCORE=0.6;
      					}
      				}else{
-     					if(oneVO.JSLB == TYPE){
+     					if(oneVO.JSLB == TYPE_A){
      						oneVO.SCORE=1.2/(number-1);
      					}else{
      						oneVO.SCORE=0.4/(number-1);
@@ -81,29 +81,29 @@
      				}
      			}
      		}else if(oneVO.JSJX ==SECONDONE || oneVO.JSJX ==SECONDTWO){
-     			if(oneVO.JSJB == LEVEL){
-     				if(oneVO.ISLEADER == ISHEAD){
-     					if(oneVO.JSLB == TYPE){
+     			if(oneVO.JSJB == LEVEL_GUOJIA){
+     				if(oneVO.ISLEADER == ISLEADER){
+     					if(oneVO.JSLB == TYPE_A){
      						oneVO.SCORE=1.8;
      					}else{
      						oneVO.SCORE=0.72;
      					}
      				}else{
-     					if(oneVO.JSLB == TYPE){
+     					if(oneVO.JSLB == TYPE_A){
      						oneVO.SCORE=1.2/(number-1);
      					}else{
      						oneVO.SCORE=0.48/(number-1);
      					}
      				}
      			}else{
-     				if(oneVO.ISLEADER == ISHEAD){
-     					if(oneVO.JSLB == TYPE){
+     				if(oneVO.ISLEADER == ISLEADER){
+     					if(oneVO.JSLB == TYPE_A){
      						oneVO.SCORE=1.08;
      					}else{
      						oneVO.SCORE=0.36;
      					}
      				}else{
-     					if(oneVO.JSLB == TYPE){
+     					if(oneVO.JSLB == TYPE_A){
      						oneVO.SCORE=0.72/(number-1);
      					}else{
      						oneVO.SCORE=0.24/(number-1);
@@ -111,29 +111,29 @@
      				}
      			}
      		}else if(oneVO.JSJX ==THIRDONE || oneVO.JSJX ==THIRDTWO || oneVO.JSJX ==THIRDTHREE || (oneVO.JSJX.indexOf(THIRDFOUR)!=-1)){
-     			if(oneVO.JSJB == LEVEL){
-     				if(oneVO.ISLEADER == ISHEAD){
-     					if(oneVO.JSLB == TYPE){
+     			if(oneVO.JSJB == LEVEL_GUOJIA){
+     				if(oneVO.ISLEADER == ISLEADER){
+     					if(oneVO.JSLB == TYPE_A){
      						oneVO.SCORE=1.2;
      					}else{
      						oneVO.SCORE=0.48;
      					}
      				}else{
-     					if(oneVO.JSLB == TYPE){
+     					if(oneVO.JSLB == TYPE_A){
      						oneVO.SCORE=0.8/(number-1);
      					}else{
      						oneVO.SCORE=0.32/(number-1);
      					}
      				}
      			}else{
-     				if(oneVO.ISLEADER == ISHEAD){
-     					if(oneVO.JSLB == TYPE){
+     				if(oneVO.ISLEADER == ISLEADER){
+     					if(oneVO.JSLB == TYPE_A){
      						oneVO.SCORE=0.72;
      					}else{
      						oneVO.SCORE=0.24;
      					}
      				}else{
-     					if(oneVO.JSLB == TYPE){
+     					if(oneVO.JSLB == TYPE_A){
      						oneVO.SCORE=0.48/(number-1);
      					}else{
      						oneVO.SCORE=0.16/(number-1);
